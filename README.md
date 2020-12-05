@@ -21,7 +21,37 @@ love.load = () => {
 
 ## Install
 
+1. Add from NPMJS.
+
 ```bash
 yarn add -D roomy-types
 # or npm install -D roomy-types
+```
+
+2. Link to `tsconfig.json`. See `baseUrl`, `types` and `paths` used here.
+
+```json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "types": [
+      "roomy-types",
+      // love-typescript-definitions is a dependency
+      "love-typescript-definitions"
+    ],
+    "paths": {
+      // allows import * as roomy from "roomy";
+      "roomy": ["./node_modules/roomy-types/roomy.d.ts"]
+    }
+  }
+}
+```
+
+3. Add [roomy](https://github.com/tesselode/roomy) Lua file to your project. In this case we want `require("roomy")` to import roomy so we could put the Lua file in our output directory.
+
+There are other methods too:
+
+```bash
+yarn add tesselode/roomy
+# adds roomy from github, may need to fix up module resolution
 ```

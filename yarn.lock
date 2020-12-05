@@ -39,6 +39,10 @@ resolve@^1.15.1:
     is-core-module "^2.1.0"
     path-parse "^1.0.6"
 
+roomy@tesselode/roomy:
+  version "0.0.0"
+  resolved "https://codeload.github.com/tesselode/roomy/tar.gz/2574a9cc11d42da4863e58f24c9f984cc2087e33"
+
 source-map@^0.7.3:
   version "0.7.3"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.7.3.tgz#5302f8169031735226544092e64981f751750383"
