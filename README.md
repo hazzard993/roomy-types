@@ -30,17 +30,18 @@ yarn add -D roomy-types
 
 2. Link to `tsconfig.json`. See `baseUrl`, `types` and `paths` used here.
 
+- love-typescript-definitions is a dependency
+- "paths" allows import * as roomy from "roomy";
+
 ```json
 {
   "compilerOptions": {
     "baseUrl": ".",
     "types": [
       "roomy-types",
-      // love-typescript-definitions is a dependency
       "love-typescript-definitions"
     ],
     "paths": {
-      // allows import * as roomy from "roomy";
       "roomy": ["./node_modules/roomy-types/roomy.d.ts"]
     }
   }
